@@ -27,7 +27,7 @@ export default function Car({ car }) {
 
 
 export async function getServerSideProps({ params }) {
-    const req = await fetch(`http://localhost:3000/${params.id}.json`);
+    const req = await fetch(`https://next-react-test-pi.vercel.app/${params.id}.json`);
     const data = await req.json();
 
     return {
